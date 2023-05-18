@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+  --gray-10: #dbdbdd;
+  --gray-40: #a6a7ae;
+  --blue-10: #f8f9fe;
+  --blue-50: #072952;
+}
+html {
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--blue-50);
+}
+input,
+textarea,
+button {
+  font-family: 'Ubuntu', sans-serif;
+}
+main * {
+  box-sizing: border-box;
+}
+
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  color: var(--gray-40);
+  font-weight: 400;
+  font-size: 17px;
+  margin-top: 0.675rem;
+  margin-bottom: 1rem;
+}
+fieldset {
+  border: none;
+}
+.input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+  letter-spacing: -2%;
+  font-weight: 500;
+}
+.input {
+  display: block;
+  width: 100%;
+}
+.input--text {
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--gray-10);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+label span {
+  display: flex;
+}
+.form-section {
+  display: flex;
+  flex-direction: column;
+  /* gap: 2rem; */
+}
+
+.form-section--flex {
+  display: flex;
+  gap: 24px;
+  flex-direction: column-reverse;
+}
+.form__plan-card {
+  width: 33.333%;
+  padding: 16px;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.form__plan-types-cont {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  flex-direction: row;
+}
+.slider {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-radius: 100%;
+  transition: 300ms ease-in left;
+}
+.form__toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.form__toggle:checked + .slider {
+  background: pink;
+  left: 56px;
+  transition: 300ms ease-in left;
+}
+
+.form__plan-frequency {
+  position: relative;
+  width: 88px;
+  display: block;
+  height: 40px;
+  background: #03285b;
+  border-radius: 48px;
+  margin: 0 auto;
+}
+
+.plan-card__radio {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+.plan-card__label {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.plan-card__radio + .plan-card__indicator {
+  background: #fff;
+  position: absolute;
+  border: 2px solid var(--gray-10);
+  overflow: hidden;
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.plan-card__radio:checked + .plan-card__indicator {
+  background: var(--blue-10);
+  border: 2px solid var(--blue-50);
+}
+.plan-card__icon {
+  width: 48px;
+  height: 48px;
+  background: tomato;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eef5ff;
+}
+
+aside {
+  background: #483eff;
+  padding: 16px;
+  border-radius: 8px;
+  width: 30%;
+}
+
+svg:hover .logo-circle {
+  transform: translate(10px, -10px);
+  transition: 300ms ease-in transform;
+}
+
+.container {
+  background: #fff;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.form-half {
+  padding: 48px 24px 8px 48px;
+  flex-grow: 1;
+}
+
+.form-row:not(:first-child) {
+  margin-top: 1.25rem;
+}
+
+.form-section--hidden {
+  display: none;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5em;
+  padding-bottom: 1rem;
+}
+
+.form-next {
+  background-color: var(--blue-50);
+  color: var(--blue-10);
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.form-prev:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+form {
+  max-width: 480px;
+  margin: 0 auto;
+}

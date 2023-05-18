@@ -1,0 +1,110 @@
+<body>
+  <!-- <div id="app"></div> -->
+  <main>
+    <div class="container">
+      <aside></aside>
+      <div class="form-half">
+        <form>
+          <fieldset class="form-section form-section--active">
+            <legend><h1>Personal Info</h1></legend>
+            <h2>Please provide your name, email address, and phone number.</h2>
+            <p class="form-row">
+              <label
+                ><span class="input-label">Name</span
+                ><input
+                  class="input input--text"
+                  type="text"
+                  placeholder="test"
+                />
+              </label>
+            </p>
+            <p class="form-row">
+              <label
+                ><span class="input-label">Email Address</span
+                ><input
+                  class="input input--text"
+                  type="email"
+                  placeholder="yourname@email.com"
+                />
+              </label>
+            </p>
+            <p class="form-row">
+              <label
+                ><span class="input-label">Phone Number</span
+                ><input
+                  class="input input--text"
+                  type="tel"
+                  placeholder="e.g +1 234 567 890"
+                />
+              </label>
+            </p>
+          </fieldset>
+          <fieldset
+            class="form-section form-section--flex form-section--hidden"
+          >
+            <legend>Step 2: Select Plan</legend>
+            <div class="form__plan-frequency-cont">
+              <label class="form__plan-frequency">
+                <input class="form__toggle" type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="form__plan-types-cont">
+              <div class="form__plan-card">
+                <div class="plan-card__icon"></div>
+                <input
+                  type="radio"
+                  class="plan-card__radio"
+                  name="plan-type"
+                  value="Arcade"
+                  id="arcadePlan"
+                  checked
+                />
+                <span class="plan-card__indicator"></span>
+                <label class="plan-card__label" for="arcadePlan"
+                  >Arcade <span class="plan-card__price">$9/mo</span
+                  ><span class="plan-card__promo">2 months free</span></label
+                >
+              </div>
+              <div class="form__plan-card">
+                <div class="plan-card__icon"></div>
+                <input
+                  type="radio"
+                  class="plan-card__radio"
+                  name="plan-type"
+                  value="Advanced"
+                  id="advancedPlan"
+                />
+                <span class="plan-card__indicator"></span>
+                <label class="plan-card__label" for="advancedPlan"
+                  >Advanced <span class="plan-card__price">$12/mo</span
+                  ><span class="plan-card__promo">2 months free</span></label
+                >
+              </div>
+              <div class="form__plan-card">
+                <div class="plan-card__icon"></div>
+                <input
+                  type="radio"
+                  class="plan-card__radio"
+                  name="plan-type"
+                  value="Pro"
+                  id="proPlan"
+                />
+                <span class="plan-card__indicator"></span>
+                <label class="plan-card__label" for="proPlan"
+                  >Pro <span class="plan-card__price">$15/mo</span
+                  ><span class="plan-card__promo">2 months free</span></label
+                >
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-footer">
+            <button class="form-prev" disabled>Prev Step</button>
+            <button class="form-next">Next Step</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
